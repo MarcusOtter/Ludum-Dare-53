@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2604056088033750498}
   - component: {fileID: 5014273039327776162}
+  - component: {fileID: 3266870456258418981}
   m_Layer: 0
   m_Name: snowboard
   m_TagString: Untagged
@@ -336,6 +337,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3266870456258418981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125231451815090259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74380fb3bfe2705409b0ba6c19e9c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  santa: {fileID: -8423481635835697499}
+  speed: 500
 --- !u!1 &3330932000216898676
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3472667376649372929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.369999, y: 2.06, z: 0}
+  m_LocalPosition: {x: -1.56, y: 1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -572,7 +587,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -228615509
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1340207975, guid: cd33a35084548b147a1dd710fcd11b56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -627,7 +642,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 1.5, y: -1.35}
-  m_ConnectedAnchor: {x: -0.43499947, y: 0.35500002}
+  m_ConnectedAnchor: {x: -0.029999733, y: 0.30500007}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

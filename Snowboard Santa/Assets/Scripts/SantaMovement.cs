@@ -8,7 +8,7 @@ public class SantaMovement : MonoBehaviour
 
     public event Action OnJump;
     public event Action OnLand;
-    public event Action OnOverChimneyEnter;
+    public event Action<Transform> OnOverChimneyEnter;
     public event Action OnChimneyJump;
 
     [Header("Settings")]
@@ -59,7 +59,7 @@ public class SantaMovement : MonoBehaviour
         {
             _chimneyTimer -= Time.deltaTime;
         }
-        
+
         if (_jumpBufferTimer > 0)
         {
             if (_coyoteTimer > 0)
@@ -106,10 +106,12 @@ public class SantaMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!TryGetComponent<Collider2D>(out var coll)) return;
-        if (!coll.IsTouchingLayers(chimneyLayer)) return;
+        if (_chimneyTimer > 0) return;
+        var collidedWithChimney = chimneyLayer == (chimneyLayer | (1 << other.gameObject.layer));
+        if (!collidedWithChimney) return;
         
-        OnOverChimneyEnter?.Invoke();
+        OnOverChimneyEnter?.Invoke(other.gameObject.transform);
+        other.enabled = false;
         _chimneyTimer = chimneyJumpWindow;
     }
 }

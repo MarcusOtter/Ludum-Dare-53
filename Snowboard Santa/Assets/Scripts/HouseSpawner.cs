@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;
-using UnityEditor.EditorTools;
 #endif
-
-using Unity.VisualScripting;
 
 public class HouseSpawner : MonoBehaviour
 {
@@ -27,6 +22,11 @@ public class HouseSpawner : MonoBehaviour
 
     private Vector3 spawnPoint;
 
+    private void Start()
+    {
+        spawnPoint = HouseParent.position;
+    }
+    
     public House SpawnHouse()
     {
         if (HousePrefab == null)
@@ -48,7 +48,7 @@ public class HouseSpawner : MonoBehaviour
         {
             DestroyImmediate(HouseParent.GetChild(i).gameObject);
         }
-        spawnPoint = Vector3.zero;
+        spawnPoint = HouseParent.position;
     }
 
 

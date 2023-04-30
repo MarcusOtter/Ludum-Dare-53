@@ -46,11 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HouseParent: {fileID: 2817312716796308349}
   HousePrefab: {fileID: 2482194525791619659, guid: 6b4a225188e1e684abc84d1385d8a871, type: 3}
-  MinHouseWidth: 4
-  MaxHouseWidth: 30
+  MinHouseWidth: 20
+  MaxHouseWidth: 50
   MinHouseHeight: 5
   MaxHouseHeight: 12
   MinRoofHeight: 2
   MaxRoofHeight: 5
-  MinGapWidth: 1
-  MaxGapWidth: 8
+  MinGapWidth: 10
+  MaxGapWidth: 20

@@ -13,8 +13,8 @@ TagManager:
   - UI
   - Ground
   - ChimneyJump
-  - 
-  - 
+  - Gift
+  - Santa
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Backdrop
+    uniqueID: 809949955
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

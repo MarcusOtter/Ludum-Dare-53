@@ -6,7 +6,8 @@ public class SantaMovement : MonoBehaviour
 {
     public bool IsGrounded { get; private set; }
 
-    public event Action OnJump; 
+    public event Action OnJump;
+    public event Action OnLand;
 
     [Header("Settings")]
     [SerializeField] private float speed = 5f;
@@ -34,7 +35,14 @@ public class SantaMovement : MonoBehaviour
     private void Update()
     {
         _rigidbody.velocity = new Vector2(speed, _rigidbody.velocity.y);
-        IsGrounded = CheckGrounded();
+
+        var newIsGrounded = CheckGrounded();
+        if (!IsGrounded && newIsGrounded)
+        {
+            OnLand?.Invoke();
+        }
+
+        IsGrounded = newIsGrounded;
         
         if (IsGrounded)
         {

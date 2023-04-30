@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class SantaMovement : MonoBehaviour
 {
-    public bool IsGrounded { get; private set; }
+    public RaycastHit2D IsGrounded { get; private set; }
 
     public event Action OnJump;
     public event Action OnLand;
@@ -20,7 +20,8 @@ public class SantaMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private BoxCollider2D groundedCollider;
-    [SerializeField] private LayerMask jumpableLayers;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask chimneyLayer;
 
     private Rigidbody2D _rigidbody;
 
@@ -88,9 +89,9 @@ public class SantaMovement : MonoBehaviour
         _rigidbody.angularVelocity = -horizontal * rotationSpeed;
     }
 
-    private bool CheckGrounded()
+    private RaycastHit2D CheckGrounded()
     {
         var bounds = groundedCollider.bounds;
-        return Physics2D.BoxCast(bounds.center, bounds.size, 0f, Vector2.down, 0f, jumpableLayers);
+        return Physics2D.BoxCast(bounds.center, bounds.size, 0f, Vector2.down, 0f, groundLayer);
     }
 }

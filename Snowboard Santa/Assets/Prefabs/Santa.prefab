@@ -721,8 +721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 80
-  fallMultiplier: 2
-  lowJumpMultiplier: 4
+  fallMultiplier: 4
+  lowJumpMultiplier: 5
   rotationSpeed: 500
   groundedCollider: {fileID: 915205620195564589}
   jumpableLayers:

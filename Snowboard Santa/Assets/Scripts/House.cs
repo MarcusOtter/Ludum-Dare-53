@@ -19,7 +19,7 @@ public class House : MonoBehaviour
 
     public Vector2 Middle => mainPart.bounds.center;
 
-    [SerializeField] private SpriteRenderer mainPart, roofTop, leftCorner, rightCorner;
+    [SerializeField] private SpriteRenderer mainPart, roofTop, leftCorner, rightCorner, chimney;
 
     public void SetDimensions(float w, float h, float roofH)
     {
@@ -46,6 +46,8 @@ public class House : MonoBehaviour
         ScaleToVariables();
         leftCorner.transform.position = roofTop.MidLeft();
         rightCorner.transform.position = roofTop.MidRight();
+        float diff = roofTop.HalfWidth() - chimney.HalfWidth();
+        chimney.transform.position = roofTop.TopMid() - new Vector2(chimney.HalfWidth() + Random.Range(-diff, diff), 0f);
     }
 
 }

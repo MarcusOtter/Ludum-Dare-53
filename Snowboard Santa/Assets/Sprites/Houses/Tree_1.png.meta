@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f9588dc49b330844ab124aa6cae339e
+guid: 6843f17d0fcc85a4980aa32cf54acb86
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,70 +105,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: House_Roof_2_0
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 0
-        width: 1037
-        height: 316
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d026ed48eef9a2e44a2ba6e184b4d92e
-      internalID: -156998661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: House_Roof_2_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 152
-        height: 316
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a1f14fc6f3e9c04ca68cb2b4c2b7f32
-      internalID: -436303841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: House_Roof_2_2
-      rect:
-        serializedVersion: 2
-        x: 1189
-        y: 1
-        width: 157
-        height: 315
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b60ce53d4f7641646b5d6c6aa852937b
-      internalID: -1346411169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -179,10 +116,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      House_Roof_2_0: -156998661
-      House_Roof_2_1: -436303841
-      House_Roof_2_2: -1346411169
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -164,10 +164,10 @@ TextureImporter:
       name: House_Roof_1_2
       rect:
         serializedVersion: 2
-        x: 1061
+        x: 1688
         y: 0
-        width: 61
-        height: 316
+        width: 88
+        height: 500
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -75,7 +75,6 @@ public class TrickDetector : MonoBehaviour
         {
             lastSuperAirbornePointTime = Time.time;
             ScoreManager.ScorePoints(superAirbornePoints);
-            print("Yipee");
         }
     }
 

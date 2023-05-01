@@ -14517,7 +14517,7 @@ Transform:
   m_Children:
   - {fileID: 8363084647978725223}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6181072106638469649
 MonoBehaviour:
@@ -14580,7 +14580,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.10221147, g: 0.09945709, b: 0.14150941, a: 0}
+  m_BackGroundColor: {r: 0.20784314, g: 0.22352941, b: 0.30980393, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

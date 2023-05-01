@@ -51,7 +51,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(instance == null)
         {
-            Debug.LogWarning("There is no score manager!");
+            // Debug.LogWarning("There is no score manager!");
             return;
         }
         instance.OnScore(points);

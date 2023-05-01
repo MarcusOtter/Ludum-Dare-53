@@ -26,6 +26,11 @@ public class ScoreManager : MonoBehaviour
     private static ScoreManager instance;
 
 
+    private void Start()
+    {
+        scoreText = GetComponent<TextMeshProUGUI>();
+    }
+
     private void OnEnable()
     {
         instance = this;

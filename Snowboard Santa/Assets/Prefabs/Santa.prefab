@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7390261086911972455
 Transform:
   m_ObjectHideFlags: 0
@@ -693,7 +693,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 1.5, y: -1.35}
-  m_ConnectedAnchor: {x: -0.029999733, y: 0.30500007}
+  m_ConnectedAnchor: {x: -0.029999733, y: 0.3050003}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -889,11 +889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minAirborneScoreTime: 1
-  lastAirbornePointTime: 0
-  lastSuperAirbornePointTime: 0
   airborneScoreInterval: 0.1
   superAirborneScoreInterval: 0.1
-  netAirRotation: 0
   superAirbornePoints: 100
   airborneScore: 50
 --- !u!1 &4462249281418317395
@@ -1025,7 +1022,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.5, y: 0.24}
-  m_ConnectedAnchor: {x: -0.4499998, y: 0.2349999}
+  m_ConnectedAnchor: {x: -0.4499998, y: 0.23499966}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

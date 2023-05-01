@@ -7,12 +7,13 @@ public class Snowboard : MonoBehaviour
 
 	[Header("Settings")]
 	[SerializeField] private float speed = 500f;
-	
+
+	private bool _chimneyJumped;
 	private Vector3 _axis;
 	
 	private void OnEnable()
 	{
-		santa.OnJump += HandleJump;
+		santa.OnChimneyJump += HandleJump;
 	}
 
 	private void HandleJump()
@@ -20,6 +21,8 @@ public class Snowboard : MonoBehaviour
 		var axes = new[] { Vector3.up, Vector3.down, Vector3.right, Vector3.left, Vector3.back, Vector3.forward };
 		var randomAxis = axes[Random.Range(0, axes.Length)];
 		_axis = randomAxis;
+		transform.localRotation = Quaternion.identity;
+		_chimneyJumped = true;
 	}
 
 	private void Update()
@@ -27,8 +30,9 @@ public class Snowboard : MonoBehaviour
 		if (santa.IsGrounded)
 		{
 			transform.localRotation = Quaternion.identity;
+			_chimneyJumped = false;
 		}
-		else
+		else if (_chimneyJumped)
 		{
 			transform.Rotate(_axis, speed * Time.deltaTime);
 		}
@@ -36,6 +40,6 @@ public class Snowboard : MonoBehaviour
 
 	private void OnDisable()
 	{
-		santa.OnJump -= HandleJump;
+		santa.OnChimneyJump -= HandleJump;
 	}
 }

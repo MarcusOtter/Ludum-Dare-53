@@ -991,8 +991,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad67199706f463846aa0a21eab52e658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 0}
-  audio: {fileID: 0}
+  landingSound: {fileID: 8300000, guid: e7bd6a250828bcc40bcba6767a180701, type: 3}
+  landingSoundVolume: 0.21
+  jumpSound:
+  - {fileID: 8300000, guid: 9b5e2b2b8d2761b47b7ce4dffd176773, type: 3}
+  - {fileID: 8300000, guid: 2cbd6469ff880b44084f1180335b016c, type: 3}
+  - {fileID: 8300000, guid: 1ba0f2125e534d54d941e98bae74d4fb, type: 3}
+  - {fileID: 8300000, guid: f21839e0251a26c4b8d4028b9561b810, type: 3}
+  - {fileID: 8300000, guid: 972ce62fd59be3547a8378039c5daadb, type: 3}
+  - {fileID: 8300000, guid: 16faa1dbf7973c24fa2059849d571094, type: 3}
+  - {fileID: 8300000, guid: b7cf7e1dd0ecee745bde25847d0ecda0, type: 3}
+  unusedJumpSounds: []
+  jumpSoundVolume: 1
 --- !u!82 &3115132613841774103
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1003,7 +1013,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cdacf7287cd59c94097493a43c944c88, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ddf2f81a8647b54d9eff08bb835c65c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1

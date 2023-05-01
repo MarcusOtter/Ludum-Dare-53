@@ -1,44 +1,58 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 using Random = UnityEngine.Random;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private Color[] colors = { Color.red, Color.green };
+    [SerializeField] private Color[] colors = { Color.white };
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    [SerializeField] private TextMeshProUGUI gameOverScore;
+    [SerializeField] private TextMeshProUGUI highscoreText;
+    [SerializeField] private string highscorePrefix = "Highscore: ";
+    
     public Action<int> OnScore;
 
-    private int score;
-    public int Score
+    private Color _startColor;
+
+    private bool _isDead;
+    private int _score;
+    private int Score
     {
-        get { return score; }
+        get => _score;
         set
         {
-            score = value;
+            _score = value;
             scoreText.text = value.ToString();
         }
     }
-    private static ScoreManager instance;
-
-
+    
     private void Start()
     {
-        scoreText = GetComponent<TextMeshProUGUI>();
+        scoreText.text = "0";
+        _startColor = scoreText.color;
     }
 
     private void OnEnable()
     {
-        instance = this;
         OnScore += PlayScoreEffect;
+        GameStateHandler.OnGameOver += HandleGameOver;
     }
+
+    private void HandleGameOver()
+    {
+        _isDead = true;
+        HighscoreTracker.Instance.SubmitScore(_score);
+        gameOverScore.text = _score.ToString();
+        highscoreText.text = highscorePrefix + HighscoreTracker.Instance.GetHighscore();
+    }
+
     private void OnDisable()
     {
         OnScore -= PlayScoreEffect;
+        GameStateHandler.OnGameOver -= HandleGameOver;
     }
 
     private void PlayScoreEffect(int score)
@@ -47,20 +61,16 @@ public class ScoreManager : MonoBehaviour
         scoreText.transform.localScale = Vector3.one * 1.2f;
     }
 
-    public static void ScorePoints(int points)
+    public void ScorePoints(int points)
     {
-        if(instance == null)
-        {
-            // Debug.LogWarning("There is no score manager!");
-            return;
-        }
-        instance.OnScore(points);
-        instance.Score += points;
+        if (_isDead) return;
+        OnScore(points);
+        Score += points;
     }
 
     private void Update()
     {
-        scoreText.color = Color.Lerp(scoreText.color, Color.white, 6f * Time.deltaTime);
+        scoreText.color = Color.Lerp(scoreText.color, _startColor, 6f * Time.deltaTime);
         scoreText.transform.localScale = Vector3.Lerp(scoreText.transform.localScale, Vector3.one, 6f * Time.deltaTime);
     }
 }

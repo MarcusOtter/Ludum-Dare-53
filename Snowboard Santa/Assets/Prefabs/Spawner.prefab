@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2817312716796308349}
-  - component: {fileID: 2585370975927128733}
+  - component: {fileID: 5773869069807851442}
+  - component: {fileID: 5367764590414034906}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2585370975927128733
+--- !u!114 &5773869069807851442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,18 +42,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 8844645045646145379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9025a7620279fa94a99b09841e8e513d, type: 3}
+  m_Script: {fileID: 11500000, guid: ac65d6519b83bcc4abff48bcbeef9b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseParent: {fileID: 2817312716796308349}
-  HousePrefab: {fileID: 2482194525791619659, guid: 6b4a225188e1e684abc84d1385d8a871, type: 3}
-  MinHouseWidth: 2
-  MaxHouseWidth: 3
-  MinHouseHeight: 2
-  MaxHouseHeight: 3
-  MinRoofHeight: 1
-  MaxRoofHeight: 2
-  MinHouseRotation: -3
-  MaxHouseRotation: 3
-  MinGapWidth: 10
-  MaxGapWidth: 20
+  minOffset: 5
+  maxOffset: 15
+  startAmount: 15
+  objects:
+  - {fileID: 3181188406832079029, guid: d8447e25da79c984f88c87b8c8b5ec07, type: 3}
+  - {fileID: 454532140669740370, guid: 737308f7177bc404dab401d14f50c25d, type: 3}
+  - {fileID: 3256323858049717116, guid: 559ba00532518ec45a5a48f4f3817fb8, type: 3}
+  - {fileID: 692319282925097767, guid: 8eee4f995d5c3f34394e6c22604209d0, type: 3}
+  - {fileID: 1566595629713661145, guid: cf1dc872a0d76704683115fcee190595, type: 3}
+  - {fileID: 5477882821558381171, guid: d8adbcbe0bffd7c4c976904c4941754b, type: 3}
+  - {fileID: 8105329622454721000, guid: 50fd134a72232c94384f079041245d25, type: 3}
+  parent: {fileID: 0}
+--- !u!114 &5367764590414034906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844645045646145379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773d090fe5314400a8b369715f6128aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  followY: 0
+  followX: 1
+  followRotation: 0

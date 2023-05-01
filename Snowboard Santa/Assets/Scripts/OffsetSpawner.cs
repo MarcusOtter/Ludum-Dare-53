@@ -31,7 +31,7 @@ public class OffsetSpawner : MonoBehaviour
 	private void Spawn()
 	{
 		var randomIndex = _previousIndex;
-		while (randomIndex == _previousIndex)
+		while (objects.Length > 1 && randomIndex == _previousIndex)
 		{
 			randomIndex = Random.Range(0, objects.Length);
 		}

@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel.Design.Serialization;
 #if UNITY_EDITOR
 using UnityEditor;
-using UnityEditor.ShaderGraph.Internal;
 #endif
 using UnityEngine;
 

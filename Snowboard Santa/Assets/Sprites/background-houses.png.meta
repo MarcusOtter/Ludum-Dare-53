@@ -126,7 +126,7 @@ TextureImporter:
         y: 1777
         width: 1370
         height: 1460
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -147,7 +147,7 @@ TextureImporter:
         y: 1770
         width: 1768
         height: 1668
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -168,7 +168,7 @@ TextureImporter:
         y: 1760
         width: 2220
         height: 1299
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -189,7 +189,7 @@ TextureImporter:
         y: 1737
         width: 465
         height: 1406
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -210,7 +210,7 @@ TextureImporter:
         y: 1737
         width: 647
         height: 1048
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -231,7 +231,7 @@ TextureImporter:
         y: 79
         width: 1386
         height: 1457
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -252,7 +252,7 @@ TextureImporter:
         y: 62
         width: 630
         height: 1454
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -273,7 +273,7 @@ TextureImporter:
         y: 75
         width: 1761
         height: 1672
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -294,7 +294,7 @@ TextureImporter:
         y: 85
         width: 2219
         height: 1297
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -315,7 +315,7 @@ TextureImporter:
         y: 99
         width: 304
         height: 1299
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []

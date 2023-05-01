@@ -21,6 +21,7 @@ public class TransformFollower : MonoBehaviour
 	private void Update()
 	{
 		var position = _transform.position;
+		var newPosition = position;
 		
 		if (followRotation)
 		{
@@ -29,13 +30,15 @@ public class TransformFollower : MonoBehaviour
 		
 		if (followX)
 		{
-			_transform.position = new Vector3(target.position.x + _offset.x, position.y, position.z);
+			newPosition.x = target.position.x + _offset.x;
 		}
 		
 		if (followY)
 		{
-			_transform.position = new Vector3(position.x, position.y + _offset.y, position.z);
+			newPosition.y = target.position.y + _offset.y;
 		}
+
+		_transform.position = newPosition;
 	}
 }
 

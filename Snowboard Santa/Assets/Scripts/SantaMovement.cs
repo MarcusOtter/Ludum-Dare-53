@@ -33,15 +33,23 @@ public class SantaMovement : MonoBehaviour
     private float _coyoteTimer;
     private float _jumpBufferTimer;
     private float _chimneyTimer;
+    private bool _allowInput = true;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
+
+    private void OnEnable()
+    {
+        GameOverCollider.OnPlayerDeath += DisableInput;
+    }
     
     private void Update()
     {
         _rigidbody.velocity = new Vector2(speed, _rigidbody.velocity.y);
+
+        if (!_allowInput) return;
 
         var newIsGrounded = IsTouching(groundLayer);
         if (!IsGrounded && newIsGrounded)
@@ -104,6 +112,11 @@ public class SantaMovement : MonoBehaviour
         _chimneyTimer = 0;
     }
     
+    private void DisableInput()
+    {
+        _allowInput = false;
+    }
+
     private RaycastHit2D IsTouching(LayerMask mask)
     {
         var bounds = touchCollider.bounds;
@@ -119,5 +132,10 @@ public class SantaMovement : MonoBehaviour
         OnOverChimneyEnter?.Invoke(other.gameObject.transform);
         other.enabled = false;
         _chimneyTimer = chimneyJumpWindow;
+    }
+    
+    private void OnDisable()
+    {
+        GameOverCollider.OnPlayerDeath -= DisableInput;
     }
 }

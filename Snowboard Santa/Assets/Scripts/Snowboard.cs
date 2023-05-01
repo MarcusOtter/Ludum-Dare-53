@@ -34,7 +34,7 @@ public class Snowboard : MonoBehaviour
 		}
 		else if (_chimneyJumped)
 		{
-			transform.Rotate(_axis, speed * Time.deltaTime);
+			transform.localRotation = Quaternion.AngleAxis(speed * Time.deltaTime, _axis) * transform.localRotation; 
 		}
 	}
 

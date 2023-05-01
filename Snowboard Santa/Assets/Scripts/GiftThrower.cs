@@ -22,7 +22,11 @@ public class GiftThrower : MonoBehaviour
 
     private void StompGift()
     {
-        _latestThrownGift.Stomp(stompForce);
+        // TODO play cronch sound
+        if (_latestThrownGift)
+        {
+            _latestThrownGift.Stomp(stompForce);
+        }
     }
 
     private void ThrowGift(Transform chimney)

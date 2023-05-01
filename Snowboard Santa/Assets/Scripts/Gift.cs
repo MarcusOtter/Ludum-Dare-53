@@ -25,7 +25,5 @@ public class Gift : MonoBehaviour
 		// _rigidbody.AddForce(Vector2.down * force, ForceMode2D.Impulse);
 		wholeGift.gameObject.SetActive(false);
 		brokenGift.gameObject.SetActive(true);
-		
-		// TODO: Play cronch sound
 	}
 }

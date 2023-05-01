@@ -59,6 +59,7 @@ public class HouseSpawner : MonoBehaviour
 [CustomEditor(typeof(HouseSpawner)), CanEditMultipleObjects]
 public class SpawnerEditor : Editor
 {
+    // ReSharper disable Unity.PerformanceAnalysis
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();

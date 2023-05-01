@@ -8,6 +8,7 @@ public class SantaMovement : MonoBehaviour
 
     public event Action OnJump;
     public event Action OnLand;
+    public event Action OnAirborne;
     public event Action<Transform> OnOverChimneyEnter;
     public event Action OnChimneyJump;
 
@@ -47,6 +48,11 @@ public class SantaMovement : MonoBehaviour
         {
             OnLand?.Invoke();
         }
+        else if(!newIsGrounded && IsGrounded) 
+        {
+            OnAirborne?.Invoke();
+        }
+
         IsGrounded = newIsGrounded;
         
         if (IsGrounded) { _coyoteTimer = coyoteTime; }

@@ -17,6 +17,10 @@ public class House : MonoBehaviour
     public float TopEdge => roofTop.Top();
     public float BottomEdge => mainPart.Bottom();
 
+
+    [SerializeField] private Color[] MainBitColors;
+    [SerializeField] private Color[] RoofBitColors;
+
     public Vector2 Middle => mainPart.bounds.center;
 
     [SerializeField] private SpriteRenderer mainPart, roofTop, leftCorner, rightCorner, chimney;
@@ -30,7 +34,7 @@ public class House : MonoBehaviour
 
     private void Start()
     {
-        Generate();
+
     }
 
     private void ScaleToVariables()
@@ -44,12 +48,28 @@ public class House : MonoBehaviour
     public void Generate()
     {
         ScaleToVariables();
+        ChooseColors();
+        PositionSlopes();
+        PositionChimney();
+    }
+
+    private void ChooseColors()
+    {
+        leftCorner.color = rightCorner.color  = roofTop.color = RoofBitColors[Random.Range(0, RoofBitColors.Length)];
+        mainPart.color = MainBitColors[Random.Range(0, MainBitColors.Length)];
+    }
+
+    private void PositionSlopes()
+    {
         leftCorner.transform.position = roofTop.MidLeft();
         rightCorner.transform.position = roofTop.MidRight();
+    }
+
+    private void PositionChimney()
+    {
         float diff = roofTop.HalfWidth() - chimney.HalfWidth();
         chimney.transform.position = roofTop.TopMid() - new Vector2(chimney.HalfWidth() + Random.Range(-diff, diff), 0f);
     }
-
 }
 
 #if (UNITY_EDITOR)

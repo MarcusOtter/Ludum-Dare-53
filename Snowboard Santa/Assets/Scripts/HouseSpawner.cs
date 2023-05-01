@@ -15,6 +15,7 @@ public class HouseSpawner : MonoBehaviour
     public float MinHouseWidth, MaxHouseWidth;
     public float MinHouseHeight, MaxHouseHeight;
     public float MinRoofHeight, MaxRoofHeight;
+    public float MinHouseRotation, MaxHouseRotation;
 
     [Header("Gaps")]
     public float MinGapWidth;
@@ -37,6 +38,7 @@ public class HouseSpawner : MonoBehaviour
         House latest = Instantiate(HousePrefab, spawnPoint, Quaternion.identity, HouseParent);
         HousePrefab.SetDimensions(Random.Range(MinHouseWidth, MaxHouseWidth), Random.Range(MinHouseHeight, MaxHouseHeight), Random.Range(MinRoofHeight, MaxRoofHeight));
         spawnPoint.x = latest.RightEdge + Random.Range(MinGapWidth, MaxGapWidth);
+        latest.transform.rotation = Quaternion.AngleAxis(Random.Range(MinHouseRotation, MaxHouseRotation), Vector3.forward);
         return latest;
     }
 

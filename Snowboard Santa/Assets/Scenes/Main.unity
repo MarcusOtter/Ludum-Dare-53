@@ -32656,29 +32656,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3115132613841774103, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1ddf2f81a8647b54d9eff08bb835c65c, type: 3}
     - target: {fileID: 3975281900236682590, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
       propertyPath: m_Name
       value: Santa
-      objectReference: {fileID: 0}
-    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
-      propertyPath: landingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: e7bd6a250828bcc40bcba6767a180701, type: 3}
-    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
-      propertyPath: landingSoundVolume
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 8769812651705074125, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.30499983
-      objectReference: {fileID: 0}
-    - target: {fileID: 8783120459843899220, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.2349999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

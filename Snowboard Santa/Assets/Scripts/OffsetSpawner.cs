@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Linq;
 // It is assumed that this script is always moving to the right
 public class OffsetSpawner : MonoBehaviour
 {
@@ -39,7 +39,11 @@ public class OffsetSpawner : MonoBehaviour
 		var spawned = Instantiate(randomObject, transform.position, Quaternion.identity, parent);
 		
 		var offset = Random.Range(minOffset, maxOffset);
-		_nextSpawnPosition = transform.position.Add(x: offset + spawned.Width());
+
+		var sprites = spawned.GetComponentsInChildren<SpriteRenderer>();
+		float maxWidth = sprites.OrderBy(spr => spr.Right()).Last().Right() - spawned.transform.position.x;
+
+		_nextSpawnPosition = transform.position.Add(x: offset + maxWidth);
 		_previousIndex = randomIndex;
 	}
 }

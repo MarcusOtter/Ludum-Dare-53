@@ -1,23 +1,23 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class GameStateHandler : MonoBehaviour
 {
-	[SerializeField] private UnityEvent OnGameStart;
-	[SerializeField] private UnityEvent OnGameOver;
+	public static Action OnGameOver;
+	
+	[FormerlySerializedAs("OnGameOver")]
+	[SerializeField] private UnityEvent UnityOnGameOver;
 
 	private void OnEnable()
 	{
 		GameOverCollider.OnPlayerDeath += GameOver;
 	}
 
-	private void StartGame()
-	{
-		OnGameStart?.Invoke();
-	}
-
 	private void GameOver()
 	{
+		UnityOnGameOver?.Invoke();
 		OnGameOver?.Invoke();
 	}
 

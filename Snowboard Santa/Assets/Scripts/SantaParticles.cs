@@ -80,6 +80,7 @@ public class SantaParticles : MonoBehaviour
 	
 	private void Play()
 	{
+		if (GameStateHandler.GameEnded) return;
 		if (_particleSystem.main.loop && _particleSystem.isPlaying) return;
 		_particleSystem.time = 0;
 		_particleSystem.Play();

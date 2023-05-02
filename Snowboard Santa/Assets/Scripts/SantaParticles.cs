@@ -25,7 +25,7 @@ public class SantaParticles : MonoBehaviour
 		if (!_santa) return;
 		if (playOnLand)
 		{
-			_santa.OnLand += Play;
+			_santa.OnLand += HandleLand;
 		}
 		if (playOnJump)
 		{
@@ -72,6 +72,11 @@ public class SantaParticles : MonoBehaviour
 			Play();
 		}
 	}
+
+	private void HandleLand()
+	{
+		Play();
+	}
 	
 	private void Play()
 	{
@@ -89,7 +94,7 @@ public class SantaParticles : MonoBehaviour
 	{
 		if (!_santa) return;
 		
-		_santa.OnLand -= Play;
+		_santa.OnLand -= HandleLand;
 		_santa.OnJump -= Play;
 		_santa.OnChimneyJump -= Play;
 		_santa.OnLand -= Stop;

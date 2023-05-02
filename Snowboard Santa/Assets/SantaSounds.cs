@@ -8,6 +8,8 @@ public class SantaSounds : MonoBehaviour
     private SantaMovement sm;
     private AudioSource audio;
 
+    [SerializeField] private AudioClip chimneyJump;
+    [SerializeField] private float chimneyJumpVolume;
 
     [SerializeField] private AudioClip landingSound;
     [Range(0f, 1f)]
@@ -16,7 +18,7 @@ public class SantaSounds : MonoBehaviour
 
     [SerializeField] private AudioClip[] jumpSound;
     [SerializeField] private List<AudioClip> unusedJumpSounds = new List<AudioClip>();
-    [Range(0f, 1f)]
+    [Range(0f, 2f)]
     [SerializeField] private float jumpSoundVolume;
 
     [SerializeField] private AudioClip[] presentCrunch;
@@ -32,7 +34,9 @@ public class SantaSounds : MonoBehaviour
         sm.OnJump += PlayJumpSound;
         GameStateHandler.OnGameOver += PlaySantaCrunch;
         sm.OnAirborne += StopSledSound;
+        sm.OnChimneyJump += PlayChimneyJump;
     }
+
     private void OnDisable()
     {
         sm.OnLand -= PlaySledSound;
@@ -40,6 +44,7 @@ public class SantaSounds : MonoBehaviour
         sm.OnJump -= PlayJumpSound;
         GameStateHandler.OnGameOver -= PlaySantaCrunch;
         sm.OnAirborne -= StopSledSound;
+        sm.OnChimneyJump -= PlayChimneyJump;
     }
 
     private void PlayJumpSound()
@@ -60,6 +65,11 @@ public class SantaSounds : MonoBehaviour
         }
     }
 
+    private void PlayChimneyJump()
+    {
+        SoundPlayer.PlaySound(chimneyJump, chimneyJumpVolume);
+    }
+    
     private void PlaySantaCrunch()
     {
         foreach(var c in presentCrunch)

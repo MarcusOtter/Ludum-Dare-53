@@ -6,6 +6,10 @@ public class SantaParticles : MonoBehaviour
 	[SerializeField] private bool playOnGrounded;
 	[SerializeField] private bool playOnLand;
 	[SerializeField] private bool playOnJump;
+	[SerializeField] private bool playOnChimneyJump;
+	[SerializeField] private bool playOn360;
+	[SerializeField] private bool playOn720;
+	[SerializeField] private bool stopOnLand;
 
 	private SantaMovement _santa;
 	private ParticleSystem _particleSystem;
@@ -14,7 +18,6 @@ public class SantaParticles : MonoBehaviour
 	{
 		_particleSystem = GetComponent<ParticleSystem>();
 		_santa = FindObjectOfType<SantaMovement>();
-
 	}
 
 	private void OnEnable()
@@ -27,6 +30,19 @@ public class SantaParticles : MonoBehaviour
 		if (playOnJump)
 		{
 			_santa.OnJump += Play;
+		}
+		if (playOnChimneyJump)
+		{
+			_santa.OnChimneyJump += Play;
+		}
+
+		if (stopOnLand)
+		{
+			_santa.OnLand += Stop;
+		}
+		if (playOn360 || playOn720)
+		{
+			TrickDetector.OnFlip += PlayFlip;
 		}
 	}
 
@@ -44,6 +60,19 @@ public class SantaParticles : MonoBehaviour
 		}
 	}
 
+	private void PlayFlip(int amount)
+	{
+		if (amount == 1 && playOn360)
+		{
+			Play();
+		}
+		
+		if (amount >= 2 && playOn720)
+		{
+			Play();
+		}
+	}
+	
 	private void Play()
 	{
 		if (_particleSystem.main.loop && _particleSystem.isPlaying) return;
@@ -62,5 +91,8 @@ public class SantaParticles : MonoBehaviour
 		
 		_santa.OnLand -= Play;
 		_santa.OnJump -= Play;
+		_santa.OnChimneyJump -= Play;
+		_santa.OnLand -= Stop;
+		TrickDetector.OnFlip -= PlayFlip;
 	}
 }

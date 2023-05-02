@@ -226,6 +226,8 @@ MonoBehaviour:
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
+  spawnOnDeath:
+  - {fileID: 8432065239034333101, guid: 1a1b5d70942822e43a3e346349d05941, type: 3}
 --- !u!1 &5493090304463304196
 GameObject:
   m_ObjectHideFlags: 0

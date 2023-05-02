@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class TrickDetector : MonoBehaviour
 {
-
+    public static event Action<int> OnFlip;
+    
     //Air time
     //Super air time
     //Front & back flip
@@ -18,6 +20,7 @@ public class TrickDetector : MonoBehaviour
     
     private bool _airborne;
     private float _airborneStartTime;
+    private int _amountOfFlips;
 
     private SantaMovement _santaMovement;
     private ScoreManager _scoreManager;
@@ -50,6 +53,7 @@ public class TrickDetector : MonoBehaviour
     {
         _airborne = false;
         _netAirRotation = 0f;
+        _amountOfFlips = 0;
     }
 
     private void AirbornePoints()
@@ -70,12 +74,16 @@ public class TrickDetector : MonoBehaviour
         {
             _scoreManager.ScorePoints(500);
             _netAirRotation -= 360;
+            _amountOfFlips++;
+            OnFlip?.Invoke(_amountOfFlips);
         }
 
         if (_netAirRotation < -360f)
         {
             _scoreManager.ScorePoints(500);
             _netAirRotation += 360;
+            _amountOfFlips++;
+            OnFlip?.Invoke(_amountOfFlips);
         }
     }
     

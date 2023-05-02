@@ -9,6 +9,7 @@ public class SelfDestruct : MonoBehaviour
 	[SerializeField] private bool destroyOnTrigger;
 	[SerializeField] private Transform destroyWhenPassed;
 	[SerializeField] private UnityEvent onDestroy;
+	[SerializeField] private Transform[] spawnOnDeath;
 
 	private bool _destroyWhenPassed;
 	
@@ -36,8 +37,12 @@ public class SelfDestruct : MonoBehaviour
 
 	private void DestroyNow()
 	{
-		Destroy(gameObject);
+		foreach(var obj in spawnOnDeath)
+		{
+			Instantiate(obj, transform.position, Quaternion.identity);
+		}
 		onDestroy?.Invoke();
+		Destroy(gameObject);
 	}
 	
 	private void OnCollisionEnter2D(Collision2D other)

@@ -24,6 +24,7 @@ public class TrickDetector : MonoBehaviour
 
     private void OnEnable()
     {
+        playerRigidbody = GetComponent<Rigidbody2D>();
         _scoreManager = FindObjectOfType<ScoreManager>();
         _santaMovement = FindObjectOfType<SantaMovement>();
 

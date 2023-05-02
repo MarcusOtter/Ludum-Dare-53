@@ -19,6 +19,8 @@ public class SantaSounds : MonoBehaviour
     [Range(0f, 1f)]
     [SerializeField] private float jumpSoundVolume;
 
+    [SerializeField] private AudioClip[] presentCrunch;
+
 
     private void OnEnable()
     {
@@ -26,27 +28,31 @@ public class SantaSounds : MonoBehaviour
         audio = GetComponent<AudioSource>();
 
         sm.OnLand += PlaySledSound;
+        sm.OnLand += PlayLandingSound;
         sm.OnJump += PlayJumpSound;
+        GameStateHandler.OnGameOver += PlaySantaCrunch;
         sm.OnAirborne += StopSledSound;
     }
     private void OnDisable()
     {
         sm.OnLand -= PlaySledSound;
         sm.OnLand -= PlayLandingSound;
+        sm.OnJump -= PlayJumpSound;
+        GameStateHandler.OnGameOver -= PlaySantaCrunch;
         sm.OnAirborne -= StopSledSound;
     }
 
     private void PlayJumpSound()
     {
-        if(unusedJumpSounds.Count == 0)
+        if (unusedJumpSounds.Count == 0)
         {
-            foreach(AudioClip clip in jumpSound)
+            foreach (AudioClip clip in jumpSound)
             {
                 unusedJumpSounds.Add(clip);
             }
         }
 
-        if(audio != null && jumpSound.Any())
+        if (jumpSound.Any())
         {
             int index = Random.Range(0, unusedJumpSounds.Count);
             SoundPlayer.PlaySound(unusedJumpSounds[index], jumpSoundVolume);
@@ -54,9 +60,15 @@ public class SantaSounds : MonoBehaviour
         }
     }
 
+    private void PlaySantaCrunch()
+    {
+        foreach(var c in presentCrunch)
+            SoundPlayer.PlaySound(c);
+    }
+
     private void PlaySledSound()
     {
-        if (audio != null) 
+        if (audio != null)
         {
             audio.volume = 1f;
         }
@@ -64,7 +76,7 @@ public class SantaSounds : MonoBehaviour
 
     private void StopSledSound()
     {
-        if (audio != null) 
+        if (audio != null)
         {
             audio.volume = 0f;
         }

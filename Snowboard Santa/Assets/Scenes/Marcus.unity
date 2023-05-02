@@ -32857,6 +32857,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Santa
       objectReference: {fileID: 0}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 776880be7258b20419faf630a5b9a85e, type: 3}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 16ee333d1827b9e4387b82e4460e51c8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

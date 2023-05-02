@@ -1816,7 +1816,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -2687,7 +2687,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -4229,7 +4229,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -5585,6 +5585,9 @@ MonoBehaviour:
   colors:
   - {r: 0, g: 1, b: 0, a: 1}
   scoreText: {fileID: 0}
+  gameOverScore: {fileID: 0}
+  highscoreText: {fileID: 0}
+  highscorePrefix: 'Highscore: '
 --- !u!1 &488702904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5892,7 +5895,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -6025,7 +6028,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -6817,7 +6820,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -7579,7 +7582,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -9111,7 +9114,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -9374,7 +9377,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -9646,7 +9649,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -11036,7 +11039,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -11299,7 +11302,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -11568,7 +11571,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -12968,7 +12971,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -13716,10 +13719,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b642f71d23f8a743878749a2d8f6b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRigidbody: {fileID: 0}
   minAirborneScoreTime: 1
   airborneScoreInterval: 0.1
-  superAirborneScoreInterval: 0.1
-  superAirbornePoints: 100
   airborneScore: 50
 --- !u!1 &1483616685
 GameObject:
@@ -18310,7 +18312,7 @@ BoxCollider2D:
   m_Offset: {x: 5.085, y: 2.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.17, y: 5.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -18645,7 +18647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 998299907629519132, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.28500175
+      value: 0.28499985
       objectReference: {fileID: 0}
     - target: {fileID: 2141506492004797545, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
       propertyPath: m_CollisionDetection
@@ -18663,13 +18665,29 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch
+      value: 
+      objectReference: {fileID: 8300000, guid: 16ee333d1827b9e4387b82e4460e51c8, type: 3}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 776880be7258b20419faf630a5b9a85e, type: 3}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 16ee333d1827b9e4387b82e4460e51c8, type: 3}
     - target: {fileID: 8769812651705074125, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 0.3050003
       objectReference: {fileID: 0}
     - target: {fileID: 8783120459843899220, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.45000005
+      value: -0.4499998
       objectReference: {fileID: 0}
     - target: {fileID: 8783120459843899220, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
       propertyPath: m_ConnectedAnchor.y

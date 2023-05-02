@@ -73,7 +73,7 @@ public class ScoreManager : MonoBehaviour
         if(message != "")
         {
             var newText = Instantiate(scoreTextPrefab, scoreTextParent.position, Quaternion.identity);
-            newText.transform.parent = scoreTextParent.transform;
+            newText.transform.SetParent(scoreTextParent.transform, true);
             newText.scoreMessage = message + $" +{points}";
         }
     }

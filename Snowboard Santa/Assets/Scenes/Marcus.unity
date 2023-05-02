@@ -1369,6 +1369,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!224 &101052356 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 245705198444458508, guid: cf0c8c7b5d537234db7421e4ba10456c, type: 3}
+  m_PrefabInstance: {fileID: 8834737188246040223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &103695950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8774661963692936030, guid: cf0c8c7b5d537234db7421e4ba10456c, type: 3}
@@ -21428,6 +21433,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1491558463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491558464}
+  m_Layer: 5
+  m_Name: ScoreTextParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1491558464
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491558463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 101052356}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 136.5, y: 12.3}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1494626077
 GameObject:
   m_ObjectHideFlags: 0
@@ -32302,6 +32343,14 @@ PrefabInstance:
       propertyPath: highscoreText
       value: 
       objectReference: {fileID: 882443940}
+    - target: {fileID: 4795513154266550463, guid: 45f8dd675518153469358ed198caea36, type: 3}
+      propertyPath: scoreTextParent
+      value: 
+      objectReference: {fileID: 1491558464}
+    - target: {fileID: 4795513154266550463, guid: 45f8dd675518153469358ed198caea36, type: 3}
+      propertyPath: scoreTextPrefab
+      value: 
+      objectReference: {fileID: 963825190045611957, guid: 14d31e17ba648b74497dfba14d995c58, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33202,6 +33251,18 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 776880be7258b20419faf630a5b9a85e, type: 3}
+    - target: {fileID: 5992123509831786901, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
+      propertyPath: presentCrunch.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 16ee333d1827b9e4387b82e4460e51c8, type: 3}
     - target: {fileID: 7322908235886605788, guid: 396038f824a78004386f8afbb135ceb2, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -33412,6 +33473,9 @@ PrefabInstance:
       objectReference: {fileID: 1776933382}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 245705198444458508, guid: cf0c8c7b5d537234db7421e4ba10456c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1491558464}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0c8c7b5d537234db7421e4ba10456c, type: 3}

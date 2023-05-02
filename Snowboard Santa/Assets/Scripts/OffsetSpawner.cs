@@ -1,14 +1,11 @@
 using UnityEngine;
 using System.Linq;
-using UnityEngine.Serialization;
 
 // It is assumed that this script is always moving to the right
 public class OffsetSpawner : MonoBehaviour
 {
-	[FormerlySerializedAs("minOffset")]
-	[SerializeField] private float minHorizontalOffset;
-	[FormerlySerializedAs("maxOffset")]
-	[SerializeField] private float maxHorizontalOffset;
+	[SerializeField] private AnimationCurve minHorizontalOffset;
+	[SerializeField] private AnimationCurve maxHorizontalOffset;
 	[SerializeField] private float minRotation;
 	[SerializeField] private float maxRotation;
 	[SerializeField] private float minVerticalOffset;
@@ -47,7 +44,7 @@ public class OffsetSpawner : MonoBehaviour
 		
 		var randomRotation = Quaternion.AngleAxis(Random.Range(minRotation, maxRotation), Vector3.forward);
 		var randomVerticalOffset = Random.Range(minVerticalOffset, maxVerticalOffset);
-		var randomHorizontalOffset = Random.Range(minHorizontalOffset, maxHorizontalOffset);
+		var randomHorizontalOffset = Random.Range(minHorizontalOffset.Evaluate(GameStateHandler.TimeAlive), maxHorizontalOffset.Evaluate(GameStateHandler.TimeAlive));
 		
 		var spawned = Instantiate(randomObject, transform.position.Add(randomVerticalOffset), randomRotation, parent);
 		

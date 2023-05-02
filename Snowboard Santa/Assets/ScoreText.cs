@@ -15,7 +15,7 @@ public class ScoreText : MonoBehaviour
         transform.localScale = Vector3.one * 0.6f;
         rotationDelta = Random.Range(-rotationDeltaMax, rotationDeltaMax);
         transform.position += new Vector3(100f, 100f, 0);
-        transform.RotateAround();
+        //transform.RotateAround();
     }
 
     void Update()

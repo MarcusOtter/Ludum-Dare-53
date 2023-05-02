@@ -13,7 +13,7 @@ public class SantaMovement : MonoBehaviour
     public event Action OnChimneyJump;
 
     [Header("Settings")]
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private AnimationCurve speed;
     [SerializeField] private float jumpForce = 120f;
     [SerializeField] private float chimneyJumpForce = 60f;
     [SerializeField] private float fallMultiplier = 2f;
@@ -47,7 +47,7 @@ public class SantaMovement : MonoBehaviour
     
     private void Update()
     {
-        _rigidbody.velocity = new Vector2(speed, _rigidbody.velocity.y);
+        _rigidbody.velocity = new Vector2(speed.Evaluate(GameStateHandler.TimeAlive), _rigidbody.velocity.y);
 
         if (!_allowInput) return;
 

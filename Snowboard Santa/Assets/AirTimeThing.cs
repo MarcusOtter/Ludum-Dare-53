@@ -29,7 +29,7 @@ public class AirTimeThing : MonoBehaviour
 
     void Update()
     {
-        if(GameStateHandler.GameEnded) { AirTimeOn = false; }
+        if(GameStateHandler.GameEnded) { AirTimeOn = false; WheelieOn = false; }
         EulerRotation.z = Mathf.Sin(Time.time * 4f) * 15f;
 
         transform.rotation = Quaternion.Euler(EulerRotation);

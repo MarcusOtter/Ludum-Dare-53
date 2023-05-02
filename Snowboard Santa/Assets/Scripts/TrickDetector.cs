@@ -99,7 +99,7 @@ public class TrickDetector : MonoBehaviour
 
     private void CrumplePackage()
     {
-        _scoreManager.ScorePoints(packageJumpScore, "Package jump!");
+        _scoreManager.ScorePoints(packageJumpScore, "Gift jump!");
     }
 
     private void Wheelie()

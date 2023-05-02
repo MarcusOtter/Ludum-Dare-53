@@ -49,7 +49,11 @@ public class SantaMovement : MonoBehaviour
     {
         _rigidbody.velocity = new Vector2(speed.Evaluate(GameStateHandler.TimeAlive), _rigidbody.velocity.y);
 
-        if (!_allowInput) return;
+        if (!_allowInput)
+        {
+            IsGrounded = new ();
+            return; 
+        }
 
         var newIsGrounded = IsTouching(groundLayer);
         if (!IsGrounded && newIsGrounded)

@@ -6,6 +6,9 @@ using Random = UnityEngine.Random;
 
 public class ScoreManager : MonoBehaviour
 {
+    [SerializeField] private ScoreText scoreTextPrefab;
+    [SerializeField] private Transform scoreTextParent;
+
     [SerializeField] private Color[] colors = { Color.white };
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -61,11 +64,18 @@ public class ScoreManager : MonoBehaviour
         scoreText.transform.localScale = Vector3.one * 1.2f;
     }
 
-    public void ScorePoints(int points)
+    public void ScorePoints(int points, string message = "")
     {
-        if (_isDead) return;
+        if (_isDead || points == 0) return;
         OnScore(points);
         Score += points;
+
+        if(message != "")
+        {
+            var newText = Instantiate(scoreTextPrefab, scoreTextParent.position, Quaternion.identity);
+            newText.transform.parent = scoreTextParent.transform;
+            newText.scoreMessage = message + $" +{points}";
+        }
     }
 
     private void Update()

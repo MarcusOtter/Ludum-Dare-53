@@ -72,7 +72,7 @@ public class TrickDetector : MonoBehaviour
 
         if(_netAirRotation > 360f)
         {
-            _scoreManager.ScorePoints(500);
+            _scoreManager.ScorePoints(500, "Backflip!");
             _netAirRotation -= 360;
             _amountOfFlips++;
             OnFlip?.Invoke(_amountOfFlips);
@@ -80,7 +80,7 @@ public class TrickDetector : MonoBehaviour
 
         if (_netAirRotation < -360f)
         {
-            _scoreManager.ScorePoints(500);
+            _scoreManager.ScorePoints(500, "Front Flip!");
             _netAirRotation += 360;
             _amountOfFlips++;
             OnFlip?.Invoke(_amountOfFlips);

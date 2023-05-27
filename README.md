@@ -1,5 +1,6 @@
 # Ludum-Dare-53
-Theme: Delivery
+Theme: Delivery  
+Unity version: `2022.2.17f1`
 
 Play at https://lemorrows.itch.io/holiday-halfpipe
 
